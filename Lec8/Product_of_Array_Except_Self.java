@@ -9,9 +9,7 @@ public class Product_of_Array_Except_Self {
 		for (int i = 0; i < ans.length; i++) {
 			System.out.print(ans[i] + " ");
 		}
-
 	}
-
 	public static int[] Product(int[] arr) {
 		int n = arr.length;
 		int[] left = new int[n];
@@ -30,3 +28,7 @@ public class Product_of_Array_Except_Self {
 		return left;
 	}
 }
+
+
+
+
