@@ -1,7 +1,7 @@
 package Lec24;
 
 public class Stack {
-	private int[] arr;
+	protected int[] arr;
 	private int idx = -1;
 
 	public Stack(int n) {
