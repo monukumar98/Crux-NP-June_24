@@ -90,35 +90,50 @@ public class LinkedList {
 		System.out.println(".");
 	}
 
+	// O(1)
 	public int removeFirst() {
 		int v = head.val;
 		if (size == 1) {
 			head = null;
 			tail = null;
 			size--;
-		}
-		else {
-			Node n=head;
-			head=head.next;
-			n=null;
+		} else {
+			Node n = head;
+			head = head.next;
+			n.next = null;
 			size--;
-			
+
 		}
 		return v;
 	}
+
+	//
+	public int removeLast() {
+		if (size == 1) {
+			return removeFirst();
+		} else {
+			Node prev = getNode(size - 2);
+			int v = tail.val;
+			tail = prev;
+			tail.next = null;
+			size--;
+			return v;
+		}
+	}
+
+	public int removeatindex(int k) {
+		if (k == 0) {
+			return removeFirst();
+		} else if (k == size - 1) {
+			return removeLast();
+		} else {
+			Node prev = getNode(k - 1);
+			Node curr = getNode(k);
+			prev.next = curr.next;
+			size--;
+			return curr.val;
+		}
+
+	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
