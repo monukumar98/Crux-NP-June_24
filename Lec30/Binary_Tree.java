@@ -149,8 +149,21 @@ public class Binary_Tree {
 		System.out.print(node.val + " ");
 	}
 	public void levelOrder() {
-	//	LinkedList<Node> ll = new LinkedList<>();// addlast remove first
-		Queue<Node> ll = new LinkedList<>();
+	//	LinkedList<Node> q = new LinkedList<>();// addlast remove first
+		Queue<Node> q = new LinkedList<>();
+		q.add(root);// add last
+		while(!q.isEmpty()) {
+			Node r=q.poll();// q.remove() remove first
+			System.out.print(r.val+" ");
+			if(r.left!=null) {
+				q.add(r.left);
+			}
+			if(r.right!=null) {
+				q.add(r.right);
+			}
+			
+		}
+		System.out.println();
 	}
 }
 
