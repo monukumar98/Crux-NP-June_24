@@ -36,9 +36,14 @@ public class Group_Anagrams {
 		}
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < freq.length; i++) {
-			sb.append(freq[i]);
+			sb.append(freq[i]+" ");
 		}
 		return sb.toString();
 	}
 
 }
+
+
+
+
+
